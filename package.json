@@ -41,7 +41,7 @@
     "test": "jshint *.json lib/*.js test/*.js test/cases/*.js test/cases/*.json && mocha --check-leaks -R spec",
     "test-cov": "mocha --require blanket -R html-cov > test/coverage.html",
     "test-travis": "blanket cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
-    "coveralls": "./node_modules/.bin/mocha --require blanket --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "mocha --require blanket --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
   },
   "config": {
     "blanket": {
